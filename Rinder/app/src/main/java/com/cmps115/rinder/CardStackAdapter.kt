@@ -38,7 +38,7 @@ internal class CardStackAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val spot = spots[position]
-        holder.name.text = "${spot.name}"
+        holder.name.text = "${spot.id}. ${spot.name}"
         holder.f_category.text = spot.f_category
         Glide.with(holder.image)
                 .load(spot.url)
