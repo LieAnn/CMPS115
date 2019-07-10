@@ -237,59 +237,116 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         adapter.setSpots(new)
         result.dispatchUpdatesTo(adapter)
     }
-
     private fun createSpot(): Spot {
         return Spot(
-            name = "Sandwich with Boiled egg",
-            f_category = "sandwich",
-            url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+            name = "Lillian's Italian Kitchen",
+            f_category = "Italian",
+            url = "https://b.zmtcdn.com/data/reviews_photos/dc6/3eee375ec1296cacce40619edfa78dc6.jpg"
+        // address: 1148 Soquel Ave, Santa Cruz, CA 95062
         )
     }
+
+//    private fun createSpot(): Spot {
+//        return Spot(
+//            name = "Sandwich with Boiled egg",
+//            f_category = "sandwich",
+//            url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+//        )
+//    }
+
 
     private fun createSpots(): List<Spot> {
         val spots = ArrayList<Spot>()
         spots.add(
             Spot(
-                name = "Sandwich with Boiled egg",
-                f_category = "sandwich",
-                url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+                name = "Lillian's Italian Kitchen",
+                f_category = "Italian",
+                url = "https://b.zmtcdn.com/data/reviews_photos/dc6/3eee375ec1296cacce40619edfa78dc6.jpg"
+                // address: 1148 Soquel Ave, Santa Cruz, CA 95062
             )
         )
         spots.add(
             Spot(
-                name = "Autumn Soup",
-                f_category = "soup",
-                url = "https://source.unsplash.com/w6ftFbPCs9I/600x800"
+                name = "Crow's Nest Restaurant",
+                f_category = "American",
+                url = "https://s3-media1.fl.yelpcdn.com/bphoto/wuNZAIXYO8DkxDgPACzGKQ/o.jpg"
+                // address: 2218 E Cliff Dr, Santa Cruz, CA 95062
             )
         )
         spots.add(
             Spot(
-                name = "Blueberry Pancake",
-                f_category = "pancake",
-                url = "https://source.unsplash.com/P1aohbiT-EY/600x800"
+                name = "Hula's Island Grill",
+                f_category = "Californian",
+                url = "https://s3-media2.fl.yelpcdn.com/bphoto/F7X0FHSMk8GnM8vx3LQ6iA/o.jpg"
+                // address: 221 Cathcart St, Santa Cruz, CA 95060
             )
         )
         spots.add(
             Spot(
-                name = "Organic Salad",
-                f_category = "salad",
-                url = "https://source.unsplash.com/EvoIiaIVRzU/600x800"
+                name = "Zachary's Restaurant",
+                f_category = "Breakfast",
+                url = "https://s3-media1.fl.yelpcdn.com/bphoto/xihk4YE9qQV99WGt-tR31w/o.jpg"
+                // address: 819 Pacific Ave, Santa Cruz, CA 95060
             )
         )
         spots.add(
             Spot(
-                name = "Dinner Steak",
-                f_category = "steak",
-                url = "https://source.unsplash.com/auIbTAcSH6E/600x800"
+                name = "Surfrider Cafe",
+                f_category = "American",
+                url = "https://s3-media4.fl.yelpcdn.com/bphoto/ExOrBH9jbLZ6Lv8E1763zQ/o.jpg"
+                // address: 429 Front St, Santa Cruz, CA 95060
             )
         )
         spots.add(
             Spot(
-                name = "Nothing Better than Pasta",
-                f_category = "pasta",
-                url = "https://source.unsplash.com/-F_5g8EEHYE/600x800"
+                name = "El Palomar Restaurant",
+                f_category = "Mexican",
+                url = "https://s3-media3.fl.yelpcdn.com/bphoto/SWP3hctF_sL692tRTjFOxA/o.jpg"
             )
         )
+
+//        spots.add(
+//            Spot(
+//                name = "Sandwich with Boiled egg",
+//                f_category = "sandwich",
+//                url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Autumn Soup",
+//                f_category = "soup",
+//                url = "https://source.unsplash.com/w6ftFbPCs9I/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Blueberry Pancake",
+//                f_category = "pancake",
+//                url = "https://source.unsplash.com/P1aohbiT-EY/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Organic Salad",
+//                f_category = "salad",
+//                url = "https://source.unsplash.com/EvoIiaIVRzU/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Dinner Steak",
+//                f_category = "steak",
+//                url = "https://source.unsplash.com/auIbTAcSH6E/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Nothing Better than Pasta",
+//                f_category = "pasta",
+//                url = "https://source.unsplash.com/-F_5g8EEHYE/600x800"
+//            )
+//        )
 
 
         return spots
