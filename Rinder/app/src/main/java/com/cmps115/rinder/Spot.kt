@@ -10,6 +10,7 @@ data class Spot(
         val contact: String? = null,
         val address: String? = null,
         val worktime: String? = null,
+        val rating: Int? =  0,
         val menu: ArrayList<String>? = ArrayList<String>(),
         val introduce : String? = null
 
