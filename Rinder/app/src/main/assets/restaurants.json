@@ -1,12 +1,13 @@
 {
-  "album": [
+  "restaurants": [
     {
-      "title": "BINGLE BANGLE",
-      "artist": "AOA",
-      "thumb": "https://musicmeta-phinf.pstatic.net/album/002/459/2459722.jpg?type=r204Fll&v=20181212201500",
-      "date": "2018.05.28",
-      "type": "댄스",
-      "song": [
+      "name": "BINGLE BANGLE",
+      "f_category": "AOA",
+      "url": "https://musicmeta-phinf.pstatic.net/album/002/459/2459722.jpg?type=r204Fll&v=20181212201500",
+      "contact": "2018.05.28",
+      "address": "댄스",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "menu": [
         "빙글뱅글 (BINGLE BANGLE)",
         "Super Duper",
         "HEAT",
@@ -17,12 +18,13 @@
       "introduce": "올 여름을 강타할 AOA표 서머송!\nAOA의 상큼발랄 펑키팝 '빙글뱅글 (Bingle Bangle)'\n\n그룹 AOA가 경쾌하고 신나는 퍼포먼스로 돌아왔다."
     },
     {
-      "title": "RBB",
-      "artist": "Red Velvet",
-      "thumb": "https://musicmeta-phinf.pstatic.net/album/002/652/2652254.jpg?type=r204Fll&v=20181211115148",
-      "date": "2018.11.30",
-      "type": "댄스, 알앤비/어반",
-      "song": [
+      "name": "RBB",
+      "f_category": "Red Velvet",
+      "url": "https://musicmeta-phinf.pstatic.net/album/002/652/2652254.jpg?type=r204Fll&v=20181211115148",
+      "contact": "2018.11.30",
+      "address": "댄스, 알앤비/어반",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "menu": [
         "RBB (Really Bad Boy)",
         "Bufferflies",
         "So Good",
@@ -33,15 +35,13 @@
       "introduce": "'대체불가 걸그룹' 레드벨벳, 2018 연말 가요계도 점령한다!\n새 미니앨범 'RBB' 공개!\n타이틀 곡 'RBB (Really Bad Boy)'로 히트 행진 잇는다!"
     },
     {
-      "title": "Circular"
-
-      "artist": "M.C THE MAX",
-      ,
-
-      "thumb": "https://musicmeta-phinf.pstatic.net/album/002/798/2798709.jpg?type=r204Fll&v=20190104184015",
-      "date": "2019.01.02",
-      "type": "발라드",
-      "song": [
+      "name": "Circular",
+      "f_category": "M.C THE MAX",
+      "url": "https://musicmeta-phinf.pstatic.net/album/002/798/2798709.jpg?type=r204Fll&v=20190104184015",
+      "contact": "2019.01.02",
+      "address": "발라드",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "menu": [
         "사계 (하루살이)",
         "넘쳐흘러",
         "시간을 견디면",

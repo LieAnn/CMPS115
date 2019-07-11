@@ -7,15 +7,14 @@ import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import android.widget.TextView
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DiffUtil
-import com.google.android.material.navigation.NavigationView
+import com.google.gson.Gson
 import com.yuyakaido.android.cardstackview.*
+import org.json.JSONObject
 import java.util.*
 
 class MainActivity : AppCompatActivity(), CardStackListener {
@@ -245,53 +244,87 @@ class MainActivity : AppCompatActivity(), CardStackListener {
             url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
         )
     }
+//
+//    private fun createSpots(): List<Spot> {
+//        val spots = ArrayList<Spot>()
+//        spots.add(
+//            Spot(
+//                name = "Sandwich with Boiled egg",
+//                f_category = "sandwich",
+//                url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Autumn Soup",
+//                f_category = "soup",
+//                url = "https://source.unsplash.com/w6ftFbPCs9I/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Blueberry Pancake",
+//                f_category = "pancake",
+//                url = "https://source.unsplash.com/P1aohbiT-EY/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Organic Salad",
+//                f_category = "salad",
+//                url = "https://source.unsplash.com/EvoIiaIVRzU/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Dinner Steak",
+//                f_category = "steak",
+//                url = "https://source.unsplash.com/auIbTAcSH6E/600x800"
+//            )
+//        )
+//        spots.add(
+//            Spot(
+//                name = "Nothing Better than Pasta",
+//                f_category = "pasta",
+//                url = "https://source.unsplash.com/-F_5g8EEHYE/600x800"
+//            )
+//        )
+//
+//
+//        return spots
+//    }
 
     private fun createSpots(): List<Spot> {
-        val spots = ArrayList<Spot>()
-        spots.add(
-            Spot(
-                name = "Sandwich with Boiled egg",
-                f_category = "sandwich",
-                url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
-            )
-        )
-        spots.add(
-            Spot(
-                name = "Autumn Soup",
-                f_category = "soup",
-                url = "https://source.unsplash.com/w6ftFbPCs9I/600x800"
-            )
-        )
-        spots.add(
-            Spot(
-                name = "Blueberry Pancake",
-                f_category = "pancake",
-                url = "https://source.unsplash.com/P1aohbiT-EY/600x800"
-            )
-        )
-        spots.add(
-            Spot(
-                name = "Organic Salad",
-                f_category = "salad",
-                url = "https://source.unsplash.com/EvoIiaIVRzU/600x800"
-            )
-        )
-        spots.add(
-            Spot(
-                name = "Dinner Steak",
-                f_category = "steak",
-                url = "https://source.unsplash.com/auIbTAcSH6E/600x800"
-            )
-        )
-        spots.add(
-            Spot(
-                name = "Nothing Better than Pasta",
-                f_category = "pasta",
-                url = "https://source.unsplash.com/-F_5g8EEHYE/600x800"
-            )
-        )
+        val list_album = ArrayList<Spot>()
+        val gson = Gson()
+
+        try {
+            val listA = assets.open("restaurants.json")
+            val buffer = ByteArray(listA.available())
+            listA.read(buffer)
+            listA.close()
+            val json = String(buffer, Charsets.UTF_8)
+
+            val jsonObject = JSONObject(json)
+            val jsonArray = jsonObject.getJSONArray("restaurants")
+
+            var index = 0
+
+            while (index < jsonArray.length()) {
+                val spots = gson.fromJson(jsonArray.get(index).toString(), Spot::class.java)
+                list_album.add(spots)
+
+                index++
+
+            }
 
 
-        return spots
+        } catch (e: Exception) {
+            e.printStackTrace()
+
+        }
+
+        return list_album
+
     }
 }

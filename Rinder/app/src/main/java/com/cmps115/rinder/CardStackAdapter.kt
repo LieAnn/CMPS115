@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.content.Context
 import android.content.Intent
-
+import java.util.ArrayList
 
 
 internal class CardStackAdapter(

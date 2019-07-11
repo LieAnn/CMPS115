@@ -1,12 +1,23 @@
 package com.cmps115.rinder
 
+
+
 data class Spot(
         val id: Long = counter++,
-        val name: String,
-        val f_category: String,
-        val url: String
+        val name: String? = null,
+        val f_category: String? = null,
+        val url: String? = null,
+        val contact: String? = null,
+        val address: String? = null,
+        val worktime: String? = null,
+        val menu: ArrayList<String>? = ArrayList<String>(),
+        val introduce : String? = null
+
+
 ) {
     companion object {
         private var counter = 0L
     }
 }
+
+
