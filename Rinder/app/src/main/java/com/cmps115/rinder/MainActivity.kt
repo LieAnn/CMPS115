@@ -236,12 +236,12 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         adapter.setSpots(new)
         result.dispatchUpdatesTo(adapter)
     }
-
     private fun createSpot(): Spot {
         return Spot(
-            name = "Sandwich with Boiled egg",
-            f_category = "sandwich",
-            url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+            name = "Lillian's Italian Kitchen",
+            f_category = "Italian",
+            url = "https://b.zmtcdn.com/data/reviews_photos/dc6/3eee375ec1296cacce40619edfa78dc6.jpg"
+        // address: 1148 Soquel Ave, Santa Cruz, CA 95062
         )
     }
 //
@@ -294,7 +294,17 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 //        return spots
 //    }
 
+//    private fun createSpot(): Spot {
+//        return Spot(
+//            name = "Sandwich with Boiled egg",
+//            f_category = "sandwich",
+//            url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
+//        )
+//    }
+
+
     private fun createSpots(): List<Spot> {
+
         val list_album = ArrayList<Spot>()
         val gson = Gson()
 
