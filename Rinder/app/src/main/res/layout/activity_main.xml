@@ -29,6 +29,14 @@
                 android:layout_height="match_parent"
                 android:clipChildren="false">
 
+            <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="26sp" android:text="Out of Stack"
+                    android:layout_centerInParent="true"/>
             <RelativeLayout
                     android:id="@+id/button_container"
                     android:orientation="horizontal"
