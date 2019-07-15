@@ -1,41 +1,136 @@
 {
   "restaurants": [
     {
-      "name": "BINGLE BANGLE",
-      "f_category": "AOA",
-      "url": "https://musicmeta-phinf.pstatic.net/album/002/459/2459722.jpg?type=r204Fll&v=20181212201500",
-      "address": "댄스",
-      "worktime": "11:00 AM ~ 11:00 PM",
-      "rating": 5,
-      "menu": "RBB (Really Bad Boy)",
-      "introduce": "올 여름을 강타할 AOA표 서머송!\nAOA의 상큼발랄 펑키팝 '빙글뱅글 (Bingle Bangle)'\n\n그룹 AOA가 경쾌하고 신나는 퍼포먼스로 돌아왔다."
+      "name": "Lillian’s Italian Kitchen",
+      "f_category": "Italian",
+      "url": "https://s3-media4.fl.yelpcdn.com/bphoto/Py6b9bUDaRMVJ5btglBAmA/o.jpg",
+      "contact": "(831) 425-2288",
+      "address": "1148 Soquel Ave, Santa Cruz, CA 95062",
+      "worktime": "4:00 PM ~ 9:00 PM",
+      "rating": 4.5,
+      "menu": "",
+      "introduce": ""
     },
     {
-      "name": "RBB",
-      "f_category": "Red Velvet",
-      "url": "https://musicmeta-phinf.pstatic.net/album/002/652/2652254.jpg?type=r204Fll&v=20181211115148",
-      "contact": "2018.11.30",
-      "address": "댄스, 알앤비/어반",
-      "worktime": "11:00 AM ~ 11:00 PM",
-      "rating": 5,
-      "introduce": "'대체불가 걸그룹' 레드벨벳, 2018 연말 가요계도 점령한다!\n새 미니앨범 'RBB' 공개!\n타이틀 곡 'RBB (Really Bad Boy)'로 히트 행진 잇는다!"
+      "name": "Hula’s Island Grill and Tiki Room",
+      "f_category": "Hawaiian",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/O9EixqZiPKyAHe3kMthmzA/348s.jpg",
+      "contact": "(831) 426-4852",
+      "address": "221 Cathcart St, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "",
+      "introduce": ""
     },
     {
-      "name": "Circular",
-      "f_category": "M.C THE MAX",
-      "url": "https://musicmeta-phinf.pstatic.net/album/002/798/2798709.jpg?type=r204Fll&v=20190104184015",
-      "contact": "2019.01.02",
-      "worktime": "11:00 AM ~ 11:00 PM",
-      "rating": 5,
-      "menu": "사계 (하루살이)",
-      "introduce": "'엠씨더맥스' 3년 만의 정규 앨범, 9집 [Circular] 발매!\n\n3년이라는 긴 공백 끝에 정규 9집 [Circular]로 돌아온 '엠씨더맥스'!"
+      "name": "Laili Restaurant",
+      "f_category": "Middle Eastern",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/QgnvbNglkoN94LqNMScQIw/348s.jpg",
+      "contact": "(831) 423-4545",
+      "address": "101B Cooper St, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "",
+      "introduce": ""
     },
     {
-      "name": "Noodle bar",
-      "f_category": "korean",
-      "url": "https://source.unsplash.com/-F_5g8EEHYE/600x800",
-      "contact": "2019.01.02",
-      "introduce": "'엠씨더맥스' 3년 만의 정규 앨범, 9집 [Circular] 발매!\n\n3년이라는 긴 공백 끝에 정규 9집 [Circular]로 돌아온 '엠씨더맥스'!"
+      "name": "The Water Street Grill",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/qoLPW-9bmeZT56pW-XvNJw/348s.jpg",
+      "contact": "(831) 332-6122",
+      "address": "503 Water St, Santa Cruz, CA 95060",
+      "worktime": "4:00 PM ~ 9:00 PM",
+      "rating": 4,
+      "menu": "",
+      "introduce": ""
+    },
+    {
+      "name": "Johnny’s Harborside",
+      "f_category": "Seafood",
+      "url": "https://s3-media1.fl.yelpcdn.com/bphoto/vrf0TwKi_huYQwTiTgOeNA/348s.jpg",
+      "contact": "(831) 479-3430",
+      "address": "493 Lake Ave, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "",
+      "introduce": ""
+    },
+    {
+      "name": "West End Tap & Kitchen",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/Wz2yRP-fzQWEjAHxRVJxmA/348s.jpg",
+      "contact": "(831) 471-8115",
+      "address": "334D Ingalls St, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": "Surfrider Café",
+      "f_category": "American",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/S-UKgZwRntu9wQMTVtPqMg/348s.jpg",
+      "contact": "(831) 428-8995",
+      "address": "429 Front St, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 9:00 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": "Betty’s Noodle House",
+      "f_category": " Korean",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/DID1eBpNgAJfa4a5Lm2KAA/348s.jpg",
+      "contact": "(831) 426-2328",
+      "address": "920 Pacific Ave, Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 8:30 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": " Nick The Greek",
+      "f_category": "Greek",
+      "url": "https://s3-media1.fl.yelpcdn.com/bphoto/v5z2mNeXAqFuargwI59RRQ/348s.jpg",
+      "contact": "(831) 431-6313",
+      "address": "1133 Pacific Ave, Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": "Linda’s Seabreeze Cafe",
+      "f_category": "American",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/MN_nkC7dm74K90_Z6C-aHA/348s.jpg",
+      "contact": "(831) 427-9713",
+      "address": "542 Seabright Ave, Santa Cruz, CA 95060",
+      "worktime": "6:00 AM ~ 2:00 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": "Harbor Cafe",
+      "f_category": "American",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/IxEd_1MR30PNagpbq7_K9w/348s.jpg",
+      "contact": "(831) 475-4948",
+      "address": "535 7th Ave, Santa Cruz, CA 95060",
+      "worktime": "8:00 AM ~ 2:00 PM",
+      "rating": 4.5,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
+    },
+    {
+      "name": "Pono Hawaiian Grill",
+      "f_category": "Hawaiian",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/UAMei53WY8hgqoFezlw16g/348s.jpg",
+      "contact": "(831) 426-7666",
+      "address": "120 Union St, Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 10:00 PM",
+      "rating": 4,
+      "menu": "https://docs.wixstatic.com/ugd/230db1_e516d01372754040b7a42bc5a39d98bc.pdf",
+      "introduce": ""
     }
   ]
 }
