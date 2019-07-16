@@ -16,7 +16,6 @@ class InfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
-        setupButton()
         setupInfo()
     }
 
@@ -32,12 +31,6 @@ class InfoActivity : AppCompatActivity() {
     }
 
 
-    private fun setupButton(){
-        val goBack = findViewById<View>(R.id.back_button)
-        goBack.setOnClickListener {
-            val nextIntent = Intent(this, MainActivity::class.java)
-            startActivity(nextIntent)
-        }
-    }
+
 
 }
