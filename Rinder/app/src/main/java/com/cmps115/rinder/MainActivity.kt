@@ -1,14 +1,15 @@
 package com.cmps115.rinder
 
+import com.cmps115.rinder.R
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
+import android.view.*
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
+import android.widget.*
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -18,6 +19,12 @@ import com.google.gson.Gson
 import com.yuyakaido.android.cardstackview.*
 import org.json.JSONObject
 import java.util.*
+import android.content.Context
+import android.content.Context.LAYOUT_INFLATER_SERVICE
+import androidx.core.content.ContextCompat.getSystemService
+import android.view.LayoutInflater
+
+
 
 class MainActivity : AppCompatActivity(), CardStackListener {
 
@@ -29,6 +36,10 @@ class MainActivity : AppCompatActivity(), CardStackListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
+
         setupCardStackView()
         setupButton()
 
@@ -99,16 +110,19 @@ class MainActivity : AppCompatActivity(), CardStackListener {
             cardStackView.rewind()
         }
 
+
+
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
-            val setting = SwipeAnimationSetting.Builder()
-                .setDirection(Direction.Right)
-                .setDuration(Duration.Normal.duration)
-                .setInterpolator(AccelerateInterpolator())
-                .build()
-            manager.setSwipeAnimationSetting(setting)
-            cardStackView.swipe()
+            val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val view = inflater.inflate(R.layout.item_spot, null)
+            val textView = view.findViewById<TextView>(R.id.item_name)
+            Log.d("CardStackView", "pressed like button ${textView.text}")
+
         }
+
+
+
 
         val setting = findViewById<View>(R.id.setting_button)
         setting.setOnClickListener {
