@@ -2,12 +2,12 @@
 Product name: Restaurant Tinder
 Team name: S=K-rew
 Release date: 7/26/19
-Revision number: 1
-Revision date: 6/29/19
+Revision number: 2
+Revision date: 7/11/19
 
 
 High Level goals:
-An Android app that allows users to pick restaurants using the Tinder swipe model. The app will display a restaurant profile, which will consist of a picture, the location/distance from user, the name of the restaurant, and the type of cuisine. If they tap the profile, they will see the restaurants full menu. If they swipe left, they will go to a different restaurant profile. If they swipe down, they will go to a setting page which will allow them to select a price, location and star range, as well as what types of cuisine they want. Finally, if they swipe right, they will get contact information directions and possibly the ability to order online. Most of the information will come from the yelp API. The app will have an algorithm to decide which order to display restaurants. Users will also be able to sign in to save their settings and favorites. 
+An Android app that allows users to pick restaurants within UCSC using the Tinder swipe model. The app will display a restaurant profile, which will consist of a picture, the location/distance from user, the name of the restaurant, and the type of cuisine. If they tap the profile, they will see the restaurants full menu. If they swipe left, they will go to a different restaurant profile. If they swipe down, they will go to a setting page which will allow them to select a price, location and star range, as well as what types of cuisine they want. Finally, if they swipe right, they will get contact information directions and possibly the ability to order online. The restaurant information will be stored and retrieved from a database. The app will have an algorithm to decide which order to display restaurants. Users will also be able to sign in to save their settings and favorites. 
  
 User Stories:
 Sprint 1:
@@ -15,16 +15,18 @@ Sprint 1:
         As a user I want to be able to see the menu because I need more information before going to a restaurant.
         As a user I want to be able to move on to a different restaurant profile if I don't like the current one. 
         As a user I want to be able to select a restaurant and get the contact information and location, so I can go there.
+ 
 Sprint 2:
-	As a user I want to be able to see the yelp ratings of the restaurants so I can make a more informed decision about where to eat.
-        As a user I want to be able to select different settings so I can get restaurant options customized for me.
+	As a user I want to be able to see the ratings of the restaurants so I can make a more informed decision about where to eat.
         As a user I want to be able to get directions from the app so I can find the restaurant easier.
 Sprint 3:
         As a user I want to be able to have an account on the app so I can store my settings and favorites.
-        As a user I want to be able to order online from the app so I can have food ready when I arrive.
+        As a user I want to be able to select different settings so I can get restaurant options customized for me.
 
 Product Backlog:
         As a user I want to put in orders for delivery using third party apps so that I can have food delivered directly to me.
         As a user I want to form groups with other users to decide on a restaurant together.
+        As a user I want to be able to order online from the app so I can have food ready when I arrive.
+
 
 Initial Presentation

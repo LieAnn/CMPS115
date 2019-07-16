@@ -28,6 +28,15 @@
             android:background="@drawable/gradation_black">
 
         <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/Distance"/>
+        <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/ratingBar"
+                android:numStars="5"
+        />
+        <TextView
                 android:id="@+id/item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

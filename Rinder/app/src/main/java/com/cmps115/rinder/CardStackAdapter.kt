@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.content.Context
 import android.content.Intent
+import android.widget.RatingBar
 
 
 internal class CardStackAdapter(
@@ -20,6 +21,8 @@ internal class CardStackAdapter(
         val name: TextView = view.findViewById(R.id.item_name)
         var f_category: TextView = view.findViewById(R.id.item_city)
         var image: ImageView = view.findViewById(R.id.item_image)
+        var rating: RatingBar = view.findViewById(R.id.ratingBar)
+        var tag: TextView = view.findViewById(R.id.Distance)
     }
 
     private val context: Context
@@ -42,6 +45,7 @@ internal class CardStackAdapter(
 
         holder.name.text = "${spot.name}"
         holder.f_category.text = spot.f_category
+        holder.rating.setRating(spot.rating)
         Glide.with(holder.image)
                 .load(spot.url)
                 .into(holder.image)
