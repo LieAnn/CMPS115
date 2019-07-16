@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import android.content.Context
 import android.content.Intent
-import java.util.ArrayList
 
 
 internal class CardStackAdapter(
@@ -37,16 +36,20 @@ internal class CardStackAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         val spot = spots[position]
+
+
         holder.name.text = "${spot.name}"
         holder.f_category.text = spot.f_category
         Glide.with(holder.image)
                 .load(spot.url)
                 .into(holder.image)
+
         holder.itemView.setOnClickListener { v ->
 
             val intent = Intent(context, InfoActivity::class.java).apply {
-                putExtra("keyIdentifier", spot.name)
+                putExtra("keyIdentifier", spot.menu)
             }
             context.startActivity(intent)
 

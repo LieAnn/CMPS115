@@ -7,6 +7,10 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_info.*
 import android.content.Intent
 
+import com.bumptech.glide.Glide
+
+
+
 class InfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,11 +20,11 @@ class InfoActivity : AppCompatActivity() {
         setupInfo()
     }
 
-
     private fun setupInfo(){
         if (intent.hasExtra("keyIdentifier")) {
-            spot_name.text = intent.getStringExtra("keyIdentifier")
+            Glide.with(this).load(intent.getStringExtra("keyIdentifier")).into(imageView3)
 
+            //spot_name.text = intent.getStringExtra("keyIdentifier")
 
         } else {
             Toast.makeText(this, "전달된 이름이 없습니다", Toast.LENGTH_SHORT).show()
