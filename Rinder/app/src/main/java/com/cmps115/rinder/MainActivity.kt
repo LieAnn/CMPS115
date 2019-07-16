@@ -1,5 +1,6 @@
 package com.cmps115.rinder
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -27,7 +29,6 @@ class MainActivity : AppCompatActivity(), CardStackListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       //setupNavigation()
         setupCardStackView()
         setupButton()
 
@@ -107,6 +108,18 @@ class MainActivity : AppCompatActivity(), CardStackListener {
                 .build()
             manager.setSwipeAnimationSetting(setting)
             cardStackView.swipe()
+        }
+
+        val setting = findViewById<View>(R.id.setting_button)
+        setting.setOnClickListener {
+            val intent = Intent(this, SettingActivity::class.java)
+                //.apply
+            //{
+                //putExtra("SetValue",SetValue)
+            //}
+            this.startActivity(intent)
+
+            Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -244,68 +257,11 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         // address: 1148 Soquel Ave, Santa Cruz, CA 95062
         )
     }
-//
-//    private fun createSpots(): List<Spot> {
-//        val spots = ArrayList<Spot>()
-//        spots.add(
-//            Spot(
-//                name = "Sandwich with Boiled egg",
-//                f_category = "sandwich",
-//                url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
-//            )
-//        )
-//        spots.add(
-//            Spot(
-//                name = "Autumn Soup",
-//                f_category = "soup",
-//                url = "https://source.unsplash.com/w6ftFbPCs9I/600x800"
-//            )
-//        )
-//        spots.add(
-//            Spot(
-//                name = "Blueberry Pancake",
-//                f_category = "pancake",
-//                url = "https://source.unsplash.com/P1aohbiT-EY/600x800"
-//            )
-//        )
-//        spots.add(
-//            Spot(
-//                name = "Organic Salad",
-//                f_category = "salad",
-//                url = "https://source.unsplash.com/EvoIiaIVRzU/600x800"
-//            )
-//        )
-//        spots.add(
-//            Spot(
-//                name = "Dinner Steak",
-//                f_category = "steak",
-//                url = "https://source.unsplash.com/auIbTAcSH6E/600x800"
-//            )
-//        )
-//        spots.add(
-//            Spot(
-//                name = "Nothing Better than Pasta",
-//                f_category = "pasta",
-//                url = "https://source.unsplash.com/-F_5g8EEHYE/600x800"
-//            )
-//        )
-//
-//
-//        return spots
-//    }
-
-//    private fun createSpot(): Spot {
-//        return Spot(
-//            name = "Sandwich with Boiled egg",
-//            f_category = "sandwich",
-//            url = "https://source.unsplash.com/fdlZBWIP0aM/600x800"
-//        )
-//    }
 
 
     private fun createSpots(): List<Spot> {
 
-        val list_album = ArrayList<Spot>()
+        val list_restraunt = ArrayList<Spot>()
         val gson = Gson()
 
         try {
@@ -322,7 +278,7 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
             while (index < jsonArray.length()) {
                 val spots = gson.fromJson(jsonArray.get(index).toString(), Spot::class.java)
-                list_album.add(spots)
+                list_restraunt.add(spots)
 
                 index++
 
@@ -334,7 +290,9 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
         }
 
-        return list_album
+        return list_restraunt
 
     }
+
+
 }
