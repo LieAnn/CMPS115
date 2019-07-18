@@ -4,15 +4,7 @@
         <item>None</item>
         <item>American</item>
         <item>Chinese</item>
-        <item>Takeout</item>
-        <item>Vegetarian</item>
-        <item>Vegan</item>
         <item>Mexican</item>
-        <item>Noodles</item>
-        <item>Full bar</item>
-        <item>Baguette</item>
-        <item>Trendy</item>
-        <item>New</item>
-        <item>Nut free"</item>
+
     </string-array>
 </resources>
