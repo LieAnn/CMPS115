@@ -1,6 +1,5 @@
 package com.cmps115.rinder
 
-import com.cmps115.rinder.R
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -20,8 +19,6 @@ import com.yuyakaido.android.cardstackview.*
 import org.json.JSONObject
 import java.util.*
 import android.content.Context
-import android.content.Context.LAYOUT_INFLATER_SERVICE
-import androidx.core.content.ContextCompat.getSystemService
 import android.view.LayoutInflater
 
 

@@ -79,7 +79,7 @@
     },
     {
       "name": "Betty’s Noodle House",
-      "f_category": " Korean",
+      "f_category": "Korean",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/DID1eBpNgAJfa4a5Lm2KAA/348s.jpg",
       "contact": "(831) 426-2328",
       "address": "920 Pacific Ave, Santa Cruz, CA 95060",
@@ -89,7 +89,7 @@
       "introduce": ""
     },
     {
-      "name": " Nick The Greek",
+      "name": "Nick The Greek",
       "f_category": "Greek",
       "url": "https://s3-media1.fl.yelpcdn.com/bphoto/v5z2mNeXAqFuargwI59RRQ/348s.jpg",
       "contact": "(831) 431-6313",
