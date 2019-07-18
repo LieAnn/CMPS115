@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SeekBarPreference
+            android:key="pricePref"
+            android:title="Price tags"/>
+
+    <ListPreference
+            android:entries="@array/array_category"
+            android:entryValues="@array/array_category"
+            android:key="tagsPref"
+            android:title="Cuisine tags"
+    />
+
+    <SeekBarPreference
+            android:key="ratingPref"
+            android:title="Star rating"/>
+    <SeekBarPreference
+            android:key="distancePref"
+            android:title="Max distance"/>
+
+
+</androidx.preference.PreferenceScreen>
