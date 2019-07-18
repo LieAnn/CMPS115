@@ -3,7 +3,7 @@
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/selectableItemBackground"
         android:foreground="?attr/selectableItemBackground"
@@ -18,41 +18,64 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             app:riv_corner_radius="8dp"/>
-
-    <LinearLayout
-            android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:padding="16dp"
-            android:background="@drawable/gradation_black">
+            android:id="@+id/Info"
+            android:layout_gravity="bottom">
 
-        <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/Distance"/>
         <RatingBar
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/ratingBar"
+                android:layout_height="48dp"
+                android:id="@+id/ratingBar"
+                android:isIndicator="true"
                 android:numStars="5"
-        />
-        <TextView
-                android:id="@+id/item_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:textSize="26sp"/>
+                style="@android:style/Widget.DeviceDefault.RatingBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="12dp"
+                app:layout_constraintTop_toTopOf="parent"
 
+                android:max="5" android:scaleX=".5" android:scaleY=".5" android:layout_marginEnd="12dp"
+                android:transformPivotX="230dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:id="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="150dp"
+                android:layout_marginRight="150dp">
+            <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:shadowColor="#00000000" android:shadowRadius="2"/>
+        </LinearLayout>
         <TextView
                 android:id="@+id/item_city"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"/>
-
-    </LinearLayout>
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout" android:layout_marginTop="4dp"/>
+        <TextView
+                android:text="-- mi"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:id="@+id/Distance"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                android:layout_marginRight="12dp" android:layout_marginEnd="12dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
             android:id="@+id/left_overlay"
