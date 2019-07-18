@@ -265,7 +265,6 @@ class MainActivity : AppCompatActivity(), CardStackListener {
             name = "Lillian's Italian Kitchen",
             f_category = "Italian",
             url = "https://b.zmtcdn.com/data/reviews_photos/dc6/3eee375ec1296cacce40619edfa78dc6.jpg"
-        // address: 1148 Soquel Ave, Santa Cruz, CA 95062
         )
     }
 

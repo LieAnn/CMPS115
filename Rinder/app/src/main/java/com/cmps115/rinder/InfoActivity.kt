@@ -22,11 +22,8 @@ class InfoActivity : AppCompatActivity() {
     private fun setupInfo(){
         if (intent.hasExtra("keyIdentifier")) {
             Glide.with(this).load(intent.getStringExtra("keyIdentifier")).into(imageView3)
-
-            //spot_name.text = intent.getStringExtra("keyIdentifier")
-
         } else {
-            Toast.makeText(this, "전달된 이름이 없습니다", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "There was an issue", Toast.LENGTH_SHORT).show()
         }
     }
 
