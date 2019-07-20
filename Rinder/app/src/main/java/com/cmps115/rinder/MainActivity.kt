@@ -111,10 +111,8 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
-            val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val view = inflater.inflate(R.layout.item_spot, null)
-            val textView = view.findViewById<TextView>(R.id.item_name)
-            Log.d("CardStackView", "pressed like button ${textView.text}")
+
+            Log.d("CardStackView", "pressed like button")
 
         }
 
@@ -302,6 +300,15 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
         return list_restraunt
 
+    }
+
+    private fun sortSpots(): List<Spot> {
+        val list_restraunt = ArrayList<Spot>()
+
+        //무언가를 채워넣는다
+        //
+
+        return list_restraunt
     }
 
 
