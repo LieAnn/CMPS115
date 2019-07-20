@@ -3,23 +3,30 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SeekBarPreference
-            android:key="pricePref"
-            android:title="Price tags"/>
-
     <ListPreference
-            android:entries="@array/array_category"
-            android:entryValues="@array/array_category"
-            android:key="tagsPref"
-            android:title="Cuisine tags"
-    />
+            android:entries="@array/array_category2"
+            android:entryValues="@array/array_category2"
+            android:key="pricePref"
+            android:title="Price tags"
+            android:summary="Select one value"/>
+
+    <MultiSelectListPreference
+            app:key="tagsPref"
+            app:title="Cuisine tags"
+            app:summary="Select multiple values"
+            app:entries="@array/array_category"
+            app:entryValues="@array/array_category"
+            app:dialogTitle="Popular tags"/>
 
     <SeekBarPreference
             android:key="ratingPref"
-            android:title="Star rating"/>
+            android:title="Star rating"
+            android:max="5"/>
+
     <SeekBarPreference
             android:key="distancePref"
-            android:title="Max distance"/>
+            android:title="Max distance"
+            android:summary="Select a distance in miles"/>
 
 
 </androidx.preference.PreferenceScreen>
