@@ -241,6 +241,39 @@
       "rating": 3.5,
       "menu": "https://s3-media3.fl.yelpcdn.com/bphoto/ORKbAiuODMxiDlAejVIq8A/o.jpg",
       "introduce": ""
+    },
+    {
+      "name": "Chocolate",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/AckiL1PR9EgRBL1sxQpl7w/o.jpg",
+      "contact": "(831) 427-9900",
+      "address": "1522 Pacific Ave Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 11:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/Y1hah4vCN6kFJd9KASFvGg/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Golden Palace",
+      "f_category": "Chinese",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/MjgKdb7fJY4QxrFslAzL_Q/o.jpg",
+      "contact": "(831) 427-9275",
+      "address": "415 Ocean St Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "rating": 3,
+      "menu": "https://s3-media4.fl.yelpcdn.com/bphoto/v-iNm_ptyP4wFhh5ewsKTQ/o.jpg",
+      "introduce": ""
+    },
+     {
+      "name": "Beach Tacos & Nachos ",
+      "f_category": "Mexican",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/yOgBm1ef03itsuIEB_8r5w/o.jpg",
+      "contact": "(831) 291-5873",
+      "address": "400 Beach St Santa Cruz, CA 95060",
+      "worktime": "10:00 AM ~ 11:00 PM",
+      "rating": 1,
+      "menu": "https://s3-media3.fl.yelpcdn.com/bphoto/gMF2--PErzYNFW_vwSL4jg/o.jpg",
+      "introduce": ""
     }
   ]
 }
