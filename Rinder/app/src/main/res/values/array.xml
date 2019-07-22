@@ -3,16 +3,14 @@
     <string-array name="array_category">
         <item>American</item>
         <item>Chinese</item>
-        <item>Takeout</item>
-        <item>Vegetarian</item>
-        <item>Vegan</item>
+        <item>Italian</item>
+        <item>Hawaiian</item>
+        <item>Middle Eastern</item>
         <item>Mexican</item>
-        <item>Noodles</item>
-        <item>Full bar</item>
-        <item>Baguette</item>
-        <item>Trendy</item>
-        <item>New</item>
-        <item>Nut free"</item>
+        <item>Seafood</item>
+        <item>Korean</item>
+        <item>Greek</item>
+        <item>Vietnamese</item>
     </string-array>
 
     <string-array name="array_category2">
