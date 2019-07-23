@@ -50,16 +50,34 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
     override fun onCardDragging(direction: Direction, ratio: Float) {
         Log.d("CardStackView", "onCardDragging: d = ${direction.name}, r = $ratio")
 
-        if (direction == Direction.Right && ratio > 0.2) {
-            val like = findViewById<View>(R.id.like_button)
-            like.performClick()
-        }
     }
 
     override fun onCardSwiped(direction: Direction) {
         Log.d("CardStackView", "onCardSwiped: p = ${manager.topPosition}, d = $direction")
-        if (manager.topPosition == adapter.itemCount - 5) {
+        if (manager.topPosition == adapter.itemCount - 3) {
             paginate()
+        }
+
+        if (direction == Direction.Right) {
+            val cards = adapter.getSpots()
+            val card = cards.get(manager.topPosition)
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle(card.name.toString())
+                .setMessage(card.address.toString() + '\n' + card.contact.toString())
+                .setPositiveButton("call resturant") { dialogInterface, i ->
+                    val callIntent: Intent = Uri.parse("tel:${card.contact.toString()}").let { number ->
+                        Intent(Intent.ACTION_DIAL, number)
+                    }
+                    startActivity(callIntent)
+
+                }
+                .setNegativeButton("Cancel") { dialogInterface, i ->
+                    Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
+                }
+                .show()
+
         }
 
     }
@@ -114,26 +132,13 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
-
-            val cards = adapter.getSpots()
-            val card = cards.get(manager.topPosition)
-
-            val builder = AlertDialog.Builder(this)
-
-
-            builder.setTitle(card.name.toString())
-                .setMessage(card.address.toString() + '\n' + card.contact.toString())
-                .setPositiveButton("call resturant") { dialogInterface, i ->
-                    val callIntent: Intent = Uri.parse("tel:${card.contact.toString()}").let { number ->
-                        Intent(Intent.ACTION_DIAL, number)
-                    }
-                    startActivity(callIntent)
-
-                }
-                .setNegativeButton("Cancel") { dialogInterface, i ->
-                    Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
-                }
-                .show()
+            val setting = SwipeAnimationSetting.Builder()
+                .setDirection(Direction.Right)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(AccelerateInterpolator())
+                .build()
+            manager.setSwipeAnimationSetting(setting)
+            cardStackView.swipe()
         }
 
 
