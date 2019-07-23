@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
                 }
                 .setNegativeButton("Cancel") { dialogInterface, i ->
-                    /* 취소일 때 아무 액션이 없으므로 빈칸 */
+                    Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
                 }
                 .show()
         }
