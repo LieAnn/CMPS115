@@ -131,6 +131,149 @@
       "rating": 4,
       "menu": "https://s3-media4.fl.yelpcdn.com/bphoto/GpUhRcXQDj6BuT2AqKeY3g/o.jpg",
       "introduce": ""
+    },
+    {
+      "name": "The Point Market",
+      "f_category": "Mexican",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/eLqS4S44oxF-vlWZESDfxg/o.jpg",
+      "contact": "(831) 475-3356",
+      "address": "23040 E Cliff Dr Santa Cruz, CA 95062",
+      "worktime": "6:00 AM ~ 9:00 PM",
+      "rating": 4.5,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/KpyJTc6YTeMGaxTBYjx1tQ/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Alderwood Santa Cruz",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/eJ8dTicPRDxFeHEnOmxByQ/o.jpg",
+      "contact": "(831) 588-3238",
+      "address": "155 Walnut Ave Santa Cruz, CA 95060",
+      "worktime": "4:00 PM ~ 11:00 PM",
+      "rating": 4,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/wnDrZZXL7DvZenBg_EnQmw/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Crow’s Nest Restaurant",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/JRDiM2U-uCV_nGHdYM72Qg/o.jpg",
+      "contact": "(831) 476-4560",
+      "address": "2218 E Cliff Dr Santa Cruz, CA 95062",
+      "worktime": "7:30 AM ~ 11:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media4.fl.yelpcdn.com/bphoto/zq7V1aLOLODCEcKY7wPVDA/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Sesame Korean Grill",
+      "f_category": "Korean",
+      "url": "https://s3-media4.fl.yelpcdn.com/bphoto/A3nXYfoGRwUX4bwo52DUPg/o.jpg",
+      "contact": "(831) 454-8355",
+      "address": "435 Front St Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 10:00 PM",
+      "rating": 4.5,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/KC54IlSg4k2v7pxrRhVicw/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Cafe El Palomar",
+      "f_category": "Mexican",
+      "url": "https://s3-media1.fl.yelpcdn.com/bphoto/PfEFQljAv8aHnPXqEj6Hfg/o.jpg",
+      "contact": "(831) 226-1232",
+      "address": "2222 E Cliff Dr Santa Cruz, CA 95062",
+      "worktime": "7:00 AM ~ 10:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media2.fl.yelpcdn.com/bphoto/PQylV1B3ymsiS3p9rgzBUA/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Upper Crust Pizza & Pasta",
+      "f_category": "Italian",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/VE1e1Sh4A3nOAeLinlm2CA/o.jpg",
+      "contact": "(831) 423-9010",
+      "address": "2415 Mission St Santa Cruz, CA 95060",
+      "worktime": "10:00 AM ~ 11:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media4.fl.yelpcdn.com/bphoto/EM2m-6rP7M636ozhCnnUCw/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Santa Cruz Diner",
+      "f_category": "Vietnamese",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/l5vLVWx6v2ysgILzdsLiuA/o.jpg",
+      "contact": "(831) 426-7151",
+      "address": "909 Ocean St Santa Cruz, CA 95060",
+      "worktime": "7:00 AM ~ 11:30 PM",
+      "rating": 2.5,
+      "menu": "https://s3-media2.fl.yelpcdn.com/bphoto/VQN-7n3vx8AjqyTk3pK9Hg/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Burgerim",
+      "f_category": "American",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/XTOJUcbiJW_rmhFV9HurTg/o.jpg",
+      "contact": "(831) 316-7837",
+      "address": "1820 Mission St Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "rating": 3,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/iEIV4xzUukpX1O1y1LnFOg/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Linwood’s Bar & Grill",
+      "f_category": "American",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/ucAOXTltQCWeMsv353MNkw/o.jpg",
+      "contact": "(831) 475-5600",
+      "address": "1 Chaminade Ln Santa Cruz, CA 95065",
+      "worktime": "11:00 AM ~ 10:00 PM",
+      "rating": 2.5,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/waBy5ZXPoFGA71I_njRz3w/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Falafel Of Santa Cruz",
+      "f_category": "Middle Eastern",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/PmZ_FXUwgbBOwU1YivVk3g/o.jpg",
+      "contact": "(831) 459-0486",
+      "address": "1501 Mission St Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 10:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media3.fl.yelpcdn.com/bphoto/ORKbAiuODMxiDlAejVIq8A/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Chocolate",
+      "f_category": "American",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/AckiL1PR9EgRBL1sxQpl7w/o.jpg",
+      "contact": "(831) 427-9900",
+      "address": "1522 Pacific Ave Santa Cruz, CA 95060",
+      "worktime": "11:30 AM ~ 11:00 PM",
+      "rating": 3.5,
+      "menu": "https://s3-media1.fl.yelpcdn.com/bphoto/Y1hah4vCN6kFJd9KASFvGg/o.jpg",
+      "introduce": ""
+    },
+    {
+      "name": "Golden Palace",
+      "f_category": "Chinese",
+      "url": "https://s3-media2.fl.yelpcdn.com/bphoto/MjgKdb7fJY4QxrFslAzL_Q/o.jpg",
+      "contact": "(831) 427-9275",
+      "address": "415 Ocean St Santa Cruz, CA 95060",
+      "worktime": "11:00 AM ~ 11:00 PM",
+      "rating": 3,
+      "menu": "https://s3-media4.fl.yelpcdn.com/bphoto/v-iNm_ptyP4wFhh5ewsKTQ/o.jpg",
+      "introduce": ""
+    },
+     {
+      "name": "Beach Tacos & Nachos ",
+      "f_category": "Mexican",
+      "url": "https://s3-media3.fl.yelpcdn.com/bphoto/yOgBm1ef03itsuIEB_8r5w/o.jpg",
+      "contact": "(831) 291-5873",
+      "address": "400 Beach St Santa Cruz, CA 95060",
+      "worktime": "10:00 AM ~ 11:00 PM",
+      "rating": 1,
+      "menu": "https://s3-media3.fl.yelpcdn.com/bphoto/gMF2--PErzYNFW_vwSL4jg/o.jpg",
+      "introduce": ""
     }
   ]
 }
