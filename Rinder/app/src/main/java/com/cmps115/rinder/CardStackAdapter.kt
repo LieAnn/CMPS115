@@ -1,16 +1,15 @@
 package com.cmps115.rinder
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import android.content.Context
-import android.content.Intent
-import android.widget.RatingBar
 
 
 internal class CardStackAdapter(
@@ -21,8 +20,9 @@ internal class CardStackAdapter(
         val name: TextView = view.findViewById(R.id.item_name)
         var f_category: TextView = view.findViewById(R.id.item_city)
         var image: ImageView = view.findViewById(R.id.item_image)
+        var menu: ImageView = view.findViewById(R.id.menu_image)
         var rating: RatingBar = view.findViewById(R.id.ratingBar)
-        var tag: TextView = view.findViewById(R.id.Distance)
+
     }
 
     private val context: Context
@@ -50,12 +50,20 @@ internal class CardStackAdapter(
                 .load(spot.url)
                 .into(holder.image)
 
+
+        Glide.with(holder.menu)
+            .load(spot.menu)
+            .into(holder.menu)
+
         holder.itemView.setOnClickListener { v ->
 
-            val intent = Intent(context, InfoActivity::class.java).apply {
-                putExtra("keyIdentifier", spot.menu)
+            if (holder.image.getVisibility() == View.VISIBLE) {
+                holder.image.setVisibility(View.INVISIBLE)
+                holder.menu.setVisibility(View.VISIBLE)
+            } else {
+                holder.image.setVisibility(View.VISIBLE)
+                holder.menu.setVisibility(View.INVISIBLE)
             }
-            context.startActivity(intent)
 
             Toast.makeText(v.context, spot.name, Toast.LENGTH_SHORT).show()
         }

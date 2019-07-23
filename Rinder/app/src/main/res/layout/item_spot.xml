@@ -3,7 +3,7 @@
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/selectableItemBackground"
         android:foreground="?attr/selectableItemBackground"
@@ -12,109 +12,116 @@
         app:cardCornerRadius="8dp"
         app:cardBackgroundColor="@android:color/white">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/item_image"
+    <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:riv_corner_radius="8dp"/>
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Info"
-            android:layout_gravity="bottom">
+            android:layout_height="match_parent">
 
-        <RatingBar
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:id="@+id/ratingBar"
-                android:isIndicator="true"
-                android:numStars="5"
-                style="@android:style/Widget.DeviceDefault.RatingBar"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginRight="12dp"
-                app:layout_constraintTop_toTopOf="parent"
+        <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="8dp"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/menu_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="invisible"
+                app:riv_corner_radius="8dp"/>
 
-                android:max="5" android:scaleX=".5" android:scaleY=".5" android:layout_marginEnd="12dp"
-                android:transformPivotX="230dp"/>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                android:id="@+id/linearLayout"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="150dp"
-                android:layout_marginRight="150dp">
-            <TextView
-                    android:id="@+id/item_name"
+
+        <FrameLayout
+                android:id="@+id/left_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/overlay_black">
+
+            <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp"
-                    android:shadowColor="#00000000" android:shadowRadius="2"/>
-        </LinearLayout>
-        <TextView
-                android:id="@+id/item_city"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                app:layout_constraintTop_toBottomOf="@id/linearLayout" android:layout_marginTop="4dp"/>
-        <TextView
-                android:text="-- mi"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:id="@+id/Distance"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/linearLayout"
-                android:layout_marginRight="12dp" android:layout_marginEnd="12dp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:src="@drawable/skip_white_120dp"
+                    android:layout_gravity="center"/>
 
-    <FrameLayout
-            android:id="@+id/left_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/overlay_black">
+        </FrameLayout>
 
-        <ImageView
-                android:layout_width="wrap_content"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/skip_white_120dp"
-                android:layout_gravity="center"/>
+                android:id="@+id/Info"
+                android:layout_gravity="bottom">
 
-    </FrameLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <FrameLayout
-            android:id="@+id/right_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/overlay_black">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/nameRate">
 
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/like_white_120dp"
-                android:layout_gravity="center"/>
+                    <TextView
+                            android:id="@+id/item_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:textSize="24sp"
+                            android:shadowColor="#00000000" android:shadowRadius="2" android:textColorLink="#5BC9FA"
+                            android:layout_marginRight="180dp"
+                            android:layout_marginEnd="240dp" android:layout_alignEnd="@+id/ratingBar"
+                            android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
+                            android:paddingLeft="10dp"/>
+                    <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ratingBar"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:layout_marginRight="12dp"
 
-    </FrameLayout>
+                            android:max="5" android:layout_marginEnd="12dp"
+                            android:transformPivotX="230dp" android:background="#00FFFFFF" android:stepSize="0.1"
+                            android:scaleX="0.7" android:scaleY="0.7"
+                            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <TextView
+                        android:id="@+id/item_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_below="@id/nameRate"/>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <FrameLayout
-            android:id="@+id/top_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-    </FrameLayout>
 
-    <FrameLayout
-            android:id="@+id/bottom_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <FrameLayout
+                android:id="@+id/bottom_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </FrameLayout>
+        <FrameLayout
+                android:id="@+id/top_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </FrameLayout>
+        <FrameLayout
+                android:id="@+id/right_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/like_white_120dp"
+                    android:layout_gravity="center"/>
+
+        </FrameLayout>
     </FrameLayout>
 
 </androidx.cardview.widget.CardView>

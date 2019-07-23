@@ -1,7 +1,9 @@
 package com.cmps115.rinder
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -29,7 +31,6 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
     private val adapter by lazy { CardStackAdapter(this, createSpots()) }
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
@@ -48,6 +49,11 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
     override fun onCardDragging(direction: Direction, ratio: Float) {
         Log.d("CardStackView", "onCardDragging: d = ${direction.name}, r = $ratio")
+
+        if (direction == Direction.Right && ratio > 0.2) {
+            val like = findViewById<View>(R.id.like_button)
+            like.performClick()
+        }
     }
 
     override fun onCardSwiped(direction: Direction) {
@@ -55,6 +61,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         if (manager.topPosition == adapter.itemCount - 5) {
             paginate()
         }
+
     }
 
     override fun onCardRewound() {
@@ -79,6 +86,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
     private fun setupCardStackView() {
         initialize()
     }
+
 
     private fun setupButton() {
         val skip = findViewById<View>(R.id.skip_button)
@@ -107,8 +115,25 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
 
-            Log.d("CardStackView", "pressed like button")
+            val cards = adapter.getSpots()
+            val card = cards.get(manager.topPosition)
 
+            val builder = AlertDialog.Builder(this)
+
+
+            builder.setTitle(card.name.toString())
+                .setMessage(card.address.toString() + '\n' + card.contact.toString())
+                .setPositiveButton("call resturant") { dialogInterface, i ->
+                    val callIntent: Intent = Uri.parse("tel:${card.contact.toString()}").let { number ->
+                        Intent(Intent.ACTION_DIAL, number)
+                    }
+                    startActivity(callIntent)
+
+                }
+                .setNegativeButton("Cancel") { dialogInterface, i ->
+                    /* 취소일 때 아무 액션이 없으므로 빈칸 */
+                }
+                .show()
         }
 
 
@@ -301,8 +326,6 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         list_restraunt.clear()
         list_restraunt.addAll(fiteredList)
 
-        val textView: TextView = findViewById(R.id.card_testing) as TextView
-        textView.text = "Count number : ${list_restraunt.size}"
         Log.d("createSpots", "Count number : ${list_restraunt.size}")
         return list_restraunt
 
@@ -335,6 +358,5 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
         return spotsArray
     }
-
 
 }

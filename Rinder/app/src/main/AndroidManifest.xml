@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.cmps115.rinder">
 
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
             android:allowBackup="false"
@@ -14,8 +16,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity android:name=".SettingActivity">
-        </activity>
-        <activity android:name=".InfoActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
