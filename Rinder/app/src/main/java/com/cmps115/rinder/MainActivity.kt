@@ -1,50 +1,46 @@
 package com.cmps115.rinder
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
-import android.widget.*
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.Gson
 import com.yuyakaido.android.cardstackview.*
 import org.json.JSONObject
 import java.util.*
-import android.content.Context
-import android.view.LayoutInflater
 
 
-
-class MainActivity : AppCompatActivity(), CardStackListener {
+class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
     private val drawerLayout by lazy { findViewById<DrawerLayout>(R.id.drawer_layout) }
     private val cardStackView by lazy { findViewById<CardStackView>(R.id.card_stack_view) }
     private val manager by lazy { CardStackLayoutManager(this, this) }
-    private val adapter by lazy { CardStackAdapter(this,createSpots()) }
+    private val adapter by lazy { CardStackAdapter(this, createSpots()) }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
         setContentView(R.layout.activity_main)
-
-
-
-
         setupCardStackView()
         setupButton()
-
     }
 
     override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawers()
+        if (true) {
+            this.recreate()
         } else {
             super.onBackPressed()
         }
@@ -108,7 +104,6 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         }
 
 
-
         val like = findViewById<View>(R.id.like_button)
         like.setOnClickListener {
 
@@ -117,15 +112,10 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         }
 
 
-
-
         val setting = findViewById<View>(R.id.setting_button)
         setting.setOnClickListener {
             val intent = Intent(this, SettingActivity::class.java)
-                //.apply
-            //{
-                //putExtra("SetValue",SetValue)
-            //}
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             this.startActivity(intent)
 
             Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show()
@@ -151,6 +141,7 @@ class MainActivity : AppCompatActivity(), CardStackListener {
                 supportsChangeAnimations = false
             }
         }
+
     }
 
     private fun paginate() {
@@ -258,6 +249,13 @@ class MainActivity : AppCompatActivity(), CardStackListener {
         adapter.setSpots(new)
         result.dispatchUpdatesTo(adapter)
     }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+        Log.d("onSharedPreferenc", "right before create")
+
+    }
+
+
     private fun createSpot(): Spot {
         return Spot(
             name = "Lillian's Italian Kitchen",
@@ -298,15 +296,42 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
         }
 
+        Log.d("createSpots", "right before filter")
+        val fiteredList = filterSpots(list_restraunt)
+        list_restraunt.clear()
+        list_restraunt.addAll(fiteredList)
+
+        val textView: TextView = findViewById(R.id.card_testing) as TextView
+        textView.text = "Count number : ${list_restraunt.size}"
+        Log.d("createSpots", "Count number : ${list_restraunt.size}")
         return list_restraunt
 
     }
 
-    private fun sortSpots(): List<Spot> {
-        val list_restraunt = ArrayList<Spot>()
 
-        //무언가를 채워넣는다
-        //
+    private fun filterSpots(spots: List<Spot>): List<Spot> {
+        var list_restraunt = ArrayList<Spot>()
+
+        Log.d("filterSpots", "On Sort ${list_restraunt.size}")
+
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this /* Activity context */)
+        val tags = sharedPreferences.getStringSet("tagsPref", setOf(""))
+        val rates = sharedPreferences.getInt("ratingPref", 0)
+        Log.d("filterSpots", "setting data ${tags},${rates}")
+
+
+
+        if (rates == 0) {
+            list_restraunt.addAll(spots)
+        } else if (rates != 0) {
+            var spotsArray = ArrayList<Spot>()
+            spotsArray.addAll(spots)
+            list_restraunt.addAll(spotsArray.filter { it.rating >= rates })
+        }
+
+
+
+
 
         return list_restraunt
     }

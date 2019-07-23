@@ -2,4 +2,6 @@
     <string name="app_name">Rinder</string>
     <string name="set">set</string>
     <string name="cancel">cancel</string>
+    <string name="title_activity_settings">Settings</string>
+
 </resources>

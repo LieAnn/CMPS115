@@ -13,11 +13,5 @@
         <item>Vietnamese</item>
     </string-array>
 
-    <string-array name="array_category2">
-        <item>$</item>
-        <item>$$</item>
-        <item>$$$</item>
-        <item>$$$$</item>
-    </string-array>
 
 </resources>

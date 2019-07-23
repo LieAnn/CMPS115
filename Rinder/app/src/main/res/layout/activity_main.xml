@@ -28,6 +28,10 @@
                     android:elevation="0dp"
                     app:elevation="0dp"
                     app:backgroundTint="@android:color/white"/>
+            <TextView
+                    android:id="@+id/card_testing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
 
 
         </com.google.android.material.appbar.AppBarLayout>

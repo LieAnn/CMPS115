@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Star rating">
 
-    <ListPreference
-            android:entries="@array/array_category2"
-            android:entryValues="@array/array_category2"
-            android:key="pricePref"
-            android:title="Price tags"
-            android:summary="Select one value"/>
+        <SeekBarPreference
+                android:key="ratingPref"
+                android:title="Star rating"
+                android:summary="If you want to see everything, choose 0"
+                android:defaultValue="0"
+                android:max="5"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Food tags">
+        <CheckBoxPreference
+                android:title="American"
+                android:key="American"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
+                android:title="Chinese"
+                android:key="Chinese"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
+                android:title="Mexican"
+                android:key="Mexican"
+                android:defaultValue="true"/>
+    </PreferenceCategory>
+
 
     <MultiSelectListPreference
-            app:key="tagsPref"
-            app:title="Cuisine tags"
-            app:summary="Select multiple values"
-            app:entries="@array/array_category"
-            app:entryValues="@array/array_category"
-            app:dialogTitle="Popular tags"/>
-
-    <SeekBarPreference
-            android:key="ratingPref"
-            android:title="Star rating"
-            android:max="5"/>
-
-    <SeekBarPreference
-            android:key="distancePref"
-            android:title="Max distance"
-            android:summary="Select a distance in miles"/>
+            android:key="tagsPref"
+            android:title="Cuisine tags"
+            android:summary="Select multiple values"
+            android:entries="@array/array_category"
+            android:entryValues="@array/array_category"
+            android:dialogTitle="Popular tags"/>
 
 
 </androidx.preference.PreferenceScreen>
