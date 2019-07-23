@@ -2,7 +2,7 @@
   "restaurants": [
     {
       "name": "Lillian’s Italian Kitchen",
-      "f_category": "Italian",
+      "f_category": "European",
       "url": "https://s3-media4.fl.yelpcdn.com/bphoto/Py6b9bUDaRMVJ5btglBAmA/o.jpg",
       "contact": "(831) 425-2288",
       "address": "1148 Soquel Ave, Santa Cruz, CA 95062",
@@ -13,7 +13,7 @@
     },
     {
       "name": "Hula’s Island Grill and Tiki Room",
-      "f_category": "Hawaiian",
+      "f_category": "American",
       "url": "https://s3-media3.fl.yelpcdn.com/bphoto/O9EixqZiPKyAHe3kMthmzA/348s.jpg",
       "contact": "(831) 426-4852",
       "address": "221 Cathcart St, Santa Cruz, CA 95060",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Laili Restaurant",
-      "f_category": "Middle Eastern",
+      "f_category": "European",
       "url": "https://s3-media3.fl.yelpcdn.com/bphoto/QgnvbNglkoN94LqNMScQIw/348s.jpg",
       "contact": "(831) 423-4545",
       "address": "101B Cooper St, Santa Cruz, CA 95060",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Johnny’s Harborside",
-      "f_category": "Seafood",
+      "f_category": "Asian",
       "url": "https://s3-media1.fl.yelpcdn.com/bphoto/vrf0TwKi_huYQwTiTgOeNA/348s.jpg",
       "contact": "(831) 479-3430",
       "address": "493 Lake Ave, Santa Cruz, CA 95060",
@@ -79,7 +79,7 @@
     },
     {
       "name": "Betty’s Noodle House",
-      "f_category": "Korean",
+      "f_category": "Asian",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/DID1eBpNgAJfa4a5Lm2KAA/348s.jpg",
       "contact": "(831) 426-2328",
       "address": "920 Pacific Ave, Santa Cruz, CA 95060",
@@ -90,7 +90,7 @@
     },
     {
       "name": "Nick The Greek",
-      "f_category": "Greek",
+      "f_category": "European",
       "url": "https://s3-media1.fl.yelpcdn.com/bphoto/v5z2mNeXAqFuargwI59RRQ/348s.jpg",
       "contact": "(831) 431-6313",
       "address": "1133 Pacific Ave, Santa Cruz, CA 95060",
@@ -123,7 +123,7 @@
     },
     {
       "name": "Pono Hawaiian Grill",
-      "f_category": "Hawaiian",
+      "f_category": "American",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/UAMei53WY8hgqoFezlw16g/348s.jpg",
       "contact": "(831) 426-7666",
       "address": "120 Union St, Santa Cruz, CA 95060",
@@ -134,7 +134,7 @@
     },
     {
       "name": "The Point Market",
-      "f_category": "Mexican",
+      "f_category": "American",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/eLqS4S44oxF-vlWZESDfxg/o.jpg",
       "contact": "(831) 475-3356",
       "address": "23040 E Cliff Dr Santa Cruz, CA 95062",
@@ -167,7 +167,7 @@
     },
     {
       "name": "Sesame Korean Grill",
-      "f_category": "Korean",
+      "f_category": "Asian",
       "url": "https://s3-media4.fl.yelpcdn.com/bphoto/A3nXYfoGRwUX4bwo52DUPg/o.jpg",
       "contact": "(831) 454-8355",
       "address": "435 Front St Santa Cruz, CA 95060",
@@ -178,7 +178,7 @@
     },
     {
       "name": "Cafe El Palomar",
-      "f_category": "Mexican",
+      "f_category": "American",
       "url": "https://s3-media1.fl.yelpcdn.com/bphoto/PfEFQljAv8aHnPXqEj6Hfg/o.jpg",
       "contact": "(831) 226-1232",
       "address": "2222 E Cliff Dr Santa Cruz, CA 95062",
@@ -189,7 +189,7 @@
     },
     {
       "name": "Upper Crust Pizza & Pasta",
-      "f_category": "Italian",
+      "f_category": "European",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/VE1e1Sh4A3nOAeLinlm2CA/o.jpg",
       "contact": "(831) 423-9010",
       "address": "2415 Mission St Santa Cruz, CA 95060",
@@ -200,7 +200,7 @@
     },
     {
       "name": "Santa Cruz Diner",
-      "f_category": "Vietnamese",
+      "f_category": "American",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/l5vLVWx6v2ysgILzdsLiuA/o.jpg",
       "contact": "(831) 426-7151",
       "address": "909 Ocean St Santa Cruz, CA 95060",
@@ -233,7 +233,7 @@
     },
     {
       "name": "Falafel Of Santa Cruz",
-      "f_category": "Middle Eastern",
+      "f_category": "European",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/PmZ_FXUwgbBOwU1YivVk3g/o.jpg",
       "contact": "(831) 459-0486",
       "address": "1501 Mission St Santa Cruz, CA 95060",
@@ -255,7 +255,7 @@
     },
     {
       "name": "Golden Palace",
-      "f_category": "Chinese",
+      "f_category": "Asian",
       "url": "https://s3-media2.fl.yelpcdn.com/bphoto/MjgKdb7fJY4QxrFslAzL_Q/o.jpg",
       "contact": "(831) 427-9275",
       "address": "415 Ocean St Santa Cruz, CA 95060",
@@ -266,7 +266,7 @@
     },
      {
       "name": "Beach Tacos & Nachos ",
-      "f_category": "Mexican",
+       "f_category": "American",
       "url": "https://s3-media3.fl.yelpcdn.com/bphoto/yOgBm1ef03itsuIEB_8r5w/o.jpg",
       "contact": "(831) 291-5873",
       "address": "400 Beach St Santa Cruz, CA 95060",

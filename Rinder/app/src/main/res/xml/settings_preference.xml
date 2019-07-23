@@ -15,27 +15,27 @@
 
     <PreferenceCategory android:title="Food tags">
         <CheckBoxPreference
+                android:title="Asian"
+                android:key="asianPref"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
+                android:title="European"
+                android:key="europeanPref"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
                 android:title="American"
-                android:key="American"
-                android:defaultValue="true"/>
-        <CheckBoxPreference
-                android:title="Chinese"
-                android:key="Chinese"
-                android:defaultValue="true"/>
-        <CheckBoxPreference
-                android:title="Mexican"
-                android:key="Mexican"
+                android:key="americanPref"
                 android:defaultValue="true"/>
     </PreferenceCategory>
 
 
-    <MultiSelectListPreference
-            android:key="tagsPref"
-            android:title="Cuisine tags"
-            android:summary="Select multiple values"
-            android:entries="@array/array_category"
-            android:entryValues="@array/array_category"
-            android:dialogTitle="Popular tags"/>
+    <!--<MultiSelectListPreference-->
+    <!--android:key="tagsPref"-->
+    <!--android:title="Cuisine tags"-->
+    <!--android:summary="Select multiple values"-->
+    <!--android:entries="@array/array_category"-->
+    <!--android:entryValues="@array/array_category"-->
+    <!--android:dialogTitle="Popular tags"/>-->
 
 
 </androidx.preference.PreferenceScreen>

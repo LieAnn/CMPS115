@@ -310,30 +310,30 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
 
     private fun filterSpots(spots: List<Spot>): List<Spot> {
-        var list_restraunt = ArrayList<Spot>()
-
-        Log.d("filterSpots", "On Sort ${list_restraunt.size}")
-
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this /* Activity context */)
-        val tags = sharedPreferences.getStringSet("tagsPref", setOf(""))
+        val american = sharedPreferences.getBoolean("americanPref", true)
+        val european = sharedPreferences.getBoolean("europeanPref", true)
+        val asian = sharedPreferences.getBoolean("asianPref", true)
         val rates = sharedPreferences.getInt("ratingPref", 0)
-        Log.d("filterSpots", "setting data ${tags},${rates}")
+        Log.d("filterSpots", "setting data ${rates}")
+        var list_restraunt = ArrayList<Spot>()
+        var spotsArray = ArrayList<Spot>()
+        spotsArray.addAll(spots)
 
-
-
-        if (rates == 0) {
-            list_restraunt.addAll(spots)
-        } else if (rates != 0) {
-            var spotsArray = ArrayList<Spot>()
-            spotsArray.addAll(spots)
-            list_restraunt.addAll(spotsArray.filter { it.rating >= rates })
+        if (american) {
+            list_restraunt.addAll(spotsArray.filter { it.f_category == "American" })
+        }
+        if (european) {
+            list_restraunt.addAll(spotsArray.filter { it.f_category == "European" })
+        }
+        if (asian) {
+            list_restraunt.addAll(spotsArray.filter { it.f_category == "Asian" })
         }
 
+        spotsArray.clear()
+        spotsArray.addAll(list_restraunt.filter { it.rating >= rates })
 
-
-
-
-        return list_restraunt
+        return spotsArray
     }
 
 
