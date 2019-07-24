@@ -66,14 +66,14 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
             builder.setTitle(card.name.toString())
                 .setMessage(card.address.toString() + '\n' + card.contact.toString())
-                .setPositiveButton("call resturant") { dialogInterface, i ->
+                .setPositiveButton("call resturant") { _, _ ->
                     val callIntent: Intent = Uri.parse("tel:${card.contact.toString()}").let { number ->
                         Intent(Intent.ACTION_DIAL, number)
                     }
                     startActivity(callIntent)
 
                 }
-                .setNegativeButton("Cancel") { dialogInterface, i ->
+                .setNegativeButton("Cancel") { _, _ ->
                     Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
                 }
                 .show()
