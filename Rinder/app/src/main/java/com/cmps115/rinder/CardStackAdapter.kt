@@ -18,7 +18,7 @@ internal class CardStackAdapter(
 
     internal inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.item_name)
-        var f_category: TextView = view.findViewById(R.id.item_city)
+        var tags: TextView = view.findViewById(R.id.item_tags)
         var image: ImageView = view.findViewById(R.id.item_image)
         var menu: ImageView = view.findViewById(R.id.menu_image)
         var rating: RatingBar = view.findViewById(R.id.ratingBar)
@@ -43,9 +43,9 @@ internal class CardStackAdapter(
         val spot = spots[position]
 
 
-        holder.name.text = "${spot.name}"
-        holder.f_category.text = spot.f_category
-        holder.rating.setRating(spot.rating)
+        holder.name.text = spot.name
+        holder.tags.text = spot.tags
+        holder.rating.rating = spot.rating
         Glide.with(holder.image)
                 .load(spot.url)
                 .into(holder.image)
@@ -57,12 +57,12 @@ internal class CardStackAdapter(
 
         holder.itemView.setOnClickListener { v ->
 
-            if (holder.image.getVisibility() == View.VISIBLE) {
-                holder.image.setVisibility(View.INVISIBLE)
-                holder.menu.setVisibility(View.VISIBLE)
+            if (holder.image.visibility == View.VISIBLE) {
+                holder.image.visibility = View.INVISIBLE
+                holder.menu.visibility = View.VISIBLE
             } else {
-                holder.image.setVisibility(View.VISIBLE)
-                holder.menu.setVisibility(View.INVISIBLE)
+                holder.image.visibility = View.VISIBLE
+                holder.menu.visibility = View.INVISIBLE
             }
 
             Toast.makeText(v.context, spot.name, Toast.LENGTH_SHORT).show()

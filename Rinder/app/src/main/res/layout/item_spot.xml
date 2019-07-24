@@ -70,8 +70,9 @@
                             android:shadowColor="#00000000" android:shadowRadius="2" android:textColorLink="#5BC9FA"
                             android:layout_marginRight="180dp"
                             android:layout_marginEnd="240dp" android:layout_alignEnd="@+id/ratingBar"
+                            android:layout_alignRight="@+id/ratingBar"
                             android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp" android:paddingRight="10dp"/>
                     <RatingBar
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -86,7 +87,7 @@
                             android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
                 </RelativeLayout>
                 <TextView
-                        android:id="@+id/item_city"
+                        android:id="@+id/item_tags"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:textStyle="bold"

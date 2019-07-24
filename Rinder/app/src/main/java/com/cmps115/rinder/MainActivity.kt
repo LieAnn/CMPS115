@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this)
         setContentView(R.layout.activity_main)
         setupCardStackView()
         setupButton()
@@ -192,31 +192,6 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         result.dispatchUpdatesTo(adapter)
     }
 
-    private fun addFirst(size: Int) {
-        val old = adapter.getSpots()
-        val new = mutableListOf<Spot>().apply {
-            addAll(old)
-            for (i in 0 until size) {
-                add(manager.topPosition, createSpot())
-            }
-        }
-        val callback = SpotDiffCallback(old, new)
-        val result = DiffUtil.calculateDiff(callback)
-        adapter.setSpots(new)
-        result.dispatchUpdatesTo(adapter)
-    }
-
-    private fun addLast(size: Int) {
-        val old = adapter.getSpots()
-        val new = mutableListOf<Spot>().apply {
-            addAll(old)
-            addAll(List(size) { createSpot() })
-        }
-        val callback = SpotDiffCallback(old, new)
-        val result = DiffUtil.calculateDiff(callback)
-        adapter.setSpots(new)
-        result.dispatchUpdatesTo(adapter)
-    }
 
     private fun removeFirst(size: Int) {
         if (adapter.getSpots().isEmpty()) {
@@ -254,16 +229,6 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         result.dispatchUpdatesTo(adapter)
     }
 
-    private fun replace() {
-        val old = adapter.getSpots()
-        val new = mutableListOf<Spot>().apply {
-            addAll(old)
-            removeAt(manager.topPosition)
-            add(manager.topPosition, createSpot())
-        }
-        adapter.setSpots(new)
-        adapter.notifyItemChanged(manager.topPosition)
-    }
 
     private fun swap() {
         val old = adapter.getSpots()
@@ -286,18 +251,9 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
     }
 
 
-    private fun createSpot(): Spot {
-        return Spot(
-            name = "Lillian's Italian Kitchen",
-            f_category = "Italian",
-            url = "https://b.zmtcdn.com/data/reviews_photos/dc6/3eee375ec1296cacce40619edfa78dc6.jpg"
-        )
-    }
-
-
     private fun createSpots(): List<Spot> {
 
-        val list_restraunt = ArrayList<Spot>()
+        val restrauntList = ArrayList<Spot>()
         val gson = Gson()
 
         try {
@@ -314,7 +270,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
             while (index < jsonArray.length()) {
                 val spots = gson.fromJson(jsonArray.get(index).toString(), Spot::class.java)
-                list_restraunt.add(spots)
+                restrauntList.add(spots)
 
                 index++
 
@@ -327,12 +283,12 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         }
 
         Log.d("createSpots", "right before filter")
-        val fiteredList = filterSpots(list_restraunt)
-        list_restraunt.clear()
-        list_restraunt.addAll(fiteredList)
+        val fiteredList = filterSpots(restrauntList)
+        restrauntList.clear()
+        restrauntList.addAll(fiteredList)
 
-        Log.d("createSpots", "Count number : ${list_restraunt.size}")
-        return list_restraunt
+        Log.d("createSpots", "Count number : ${restrauntList.size}")
+        return restrauntList
 
     }
 
@@ -344,22 +300,22 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
         val asian = sharedPreferences.getBoolean("asianPref", true)
         val rates = sharedPreferences.getInt("ratingPref", 0)
         Log.d("filterSpots", "setting data ${rates}")
-        var list_restraunt = ArrayList<Spot>()
-        var spotsArray = ArrayList<Spot>()
+        val restrauntList = ArrayList<Spot>()
+        val spotsArray = ArrayList<Spot>()
         spotsArray.addAll(spots)
 
         if (american) {
-            list_restraunt.addAll(spotsArray.filter { it.f_category == "American" })
+            restrauntList.addAll(spotsArray.filter { it.tags == "American" })
         }
         if (european) {
-            list_restraunt.addAll(spotsArray.filter { it.f_category == "European" })
+            restrauntList.addAll(spotsArray.filter { it.tags == "European" })
         }
         if (asian) {
-            list_restraunt.addAll(spotsArray.filter { it.f_category == "Asian" })
+            restrauntList.addAll(spotsArray.filter { it.tags == "Asian" })
         }
 
         spotsArray.clear()
-        spotsArray.addAll(list_restraunt.filter { it.rating >= rates })
+        spotsArray.addAll(restrauntList.filter { it.rating >= rates })
 
         return spotsArray
     }
