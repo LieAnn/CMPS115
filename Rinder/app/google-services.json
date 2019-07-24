@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "333557021041",
+    "firebase_url": "https://rinder-cmps115.firebaseio.com",
+    "project_id": "rinder-cmps115",
+    "storage_bucket": "rinder-cmps115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333557021041:android:0880b9917ee2dbe4",
+        "android_client_info": {
+          "package_name": "com.cmps115.rinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333557021041-cpekrvqu39p6smj8s4r6u3nms6nlb5pa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cmps115.rinder",
+            "certificate_hash": "b735e2986adf42f36340c393ef6449fb7a6a3202"
+          }
+        },
+        {
+          "client_id": "333557021041-1jksoh2o8eqi2l9i4o16vqvf04j4545a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTGwmTKCu1Zf-6qWjHQErpJD_7xGdGlao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333557021041-1jksoh2o8eqi2l9i4o16vqvf04j4545a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
