@@ -13,7 +13,6 @@ import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DiffUtil
@@ -25,7 +24,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private val drawerLayout by lazy { findViewById<DrawerLayout>(R.id.drawer_layout) }
+
     private val cardStackView by lazy { findViewById<CardStackView>(R.id.card_stack_view) }
     private val manager by lazy { CardStackLayoutManager(this, this) }
     private val adapter by lazy { CardStackAdapter(this, createSpots()) }
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity(), CardStackListener, SharedPreferences.O
 
         if (direction == Direction.Right) {
             val cards = adapter.getSpots()
-            val card = cards.get(manager.topPosition)
+            val card = cards.get(manager.topPosition-1)
 
             val builder = AlertDialog.Builder(this)
 
